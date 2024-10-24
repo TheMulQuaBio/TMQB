@@ -423,16 +423,6 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#undergraduates">Undergraduates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#masters-students">Masters students</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-clear-readable-code">1. <strong>Write Clear, Readable Code</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modular-code">2. <strong>Modular Code</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">3. <strong>Error Handling</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">4. <strong>Testing</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">5. <strong>Version Control</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-optimization">6. <strong>Code Optimization</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consistent-code-style">7. <strong>Consistent Code Style</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-reviews">8. <strong>Code Reviews</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoid-hardcoding-values">9. <strong>Avoid Hardcoding Values</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refactor-code-regularly">10. <strong>Refactor Code Regularly</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-submission-practicals-wrap-up">Pre-submission practicals wrap-up</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-weekly-feedback">The Weekly Feedback</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#groupwork">Groupwork</a><ul class="nav section-nav flex-column">
@@ -455,7 +445,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="coursework-assessment">
+  <!-- #region -->
+<section class="tex2jax_ignore mathjax_ignore" id="coursework-assessment">
 <h1>Coursework Assessment<a class="headerlink" href="#coursework-assessment" title="Link to this heading">#</a></h1>
 <p>In case your work on any of the TMQB materials is being assessed, here are the guidelines.</p>
 <section id="undergraduates">
@@ -464,75 +455,66 @@ document.write(`
 </section>
 <section id="masters-students">
 <h2>Masters students<a class="headerlink" href="#masters-students" title="Link to this heading">#</a></h2>
-<p>Both your practical computing work itself (including any writeups), and whether you are following good programming and workflow
-practices will be assessed, usually on a weekly basis.</p>
+<p>Both your practical computing work itself (including any writeups), and whether you are following good programming and workflow practices will be assessed, usually on a weekly basis.</p>
 <p>The goal of the assessment is to gauge and provide feedback on how well you have learned the principles and implementation of good coding practices and keeping workflows/pipelines/software organised and reusable irrespective of of programming language; In particular (remember the <a class="reference external" href="https://peps.python.org/pep-0020/">Zen of Python</a>!):</p>
-<section id="write-clear-readable-code">
-<h3>1. <strong>Write Clear, Readable Code</strong><a class="headerlink" href="#write-clear-readable-code" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Write Clear, Readable Code</strong></p>
 <ul class="simple">
 <li><p><strong>Meaningful variable and function names</strong>: Use names that clearly describe their purpose.</p></li>
 <li><p><strong>Consistent naming conventions</strong>: Stick to a single style (e.g., <a class="reference external" href="https://simple.wikipedia.org/wiki/CamelCase">camelCase</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Snake_case">snake_case</a>).</p></li>
 <li><p><strong>Commenting and Documentation</strong>: Provide concise comments and document code sections to explain their logic, especially for complex parts.</p></li>
 </ul>
-</section>
-<section id="modular-code">
-<h3>2. <strong>Modular Code</strong><a class="headerlink" href="#modular-code" title="Link to this heading">#</a></h3>
+</li>
+<li><p><strong>Modular Code</strong></p>
 <ul class="simple">
 <li><p><strong>Single Responsibility Principle (SRP)</strong>: Functions or methods should perform one task.</p></li>
 <li><p><strong>Reusable functions</strong>: Break down large tasks into smaller, reusable functions.</p></li>
 <li><p><strong>DRY (Don’t Repeat Yourself)</strong>: Avoid duplicating code; encapsulate repetitive logic in functions.</p></li>
 </ul>
-</section>
-<section id="error-handling">
-<h3>3. <strong>Error Handling</strong><a class="headerlink" href="#error-handling" title="Link to this heading">#</a></h3>
+</li>
+<li><p><strong>Error Handling</strong></p>
 <ul class="simple">
 <li><p><strong>Graceful error handling</strong>: Use <code class="docutils literal notranslate"><span class="pre">try-except</span></code> blocks or other error-handling mechanisms to anticipate failures and handle them without crashing the program.</p></li>
 <li><p><strong>Meaningful error messages</strong>: Provide messages that help developers understand what went wrong and how to fix it.</p></li>
 </ul>
-</section>
-<section id="testing">
-<h3>4. <strong>Testing</strong><a class="headerlink" href="#testing" title="Link to this heading">#</a></h3>
+</li>
+<li><p><strong>Testing</strong></p>
 <ul class="simple">
 <li><p><strong>Unit tests</strong>: Write automated tests for individual units of code to ensure they behave as expected.</p></li>
 <li><p><strong>Test early and often</strong>: Test code during development to catch bugs before they become difficult to track.</p></li>
 </ul>
-</section>
-<section id="version-control">
-<h3>5. <strong>Version Control</strong><a class="headerlink" href="#version-control" title="Link to this heading">#</a></h3>
+</li>
+<li><p><strong>Version Control</strong></p>
 <ul class="simple">
 <li><p><strong>Use Git or other version control systems</strong>: Commit frequently, with clear commit messages describing the purpose of the changes.</p></li>
 <li><p><strong>Branching strategies</strong>: Develop new features or bug fixes in separate branches to avoid conflicts in the main branch.</p></li>
 </ul>
-</section>
-<section id="code-optimization">
-<h3>6. <strong>Code Optimization</strong><a class="headerlink" href="#code-optimization" title="Link to this heading">#</a></h3>
+</li>
+<li><p><strong>Optimization</strong></p>
 <ul class="simple">
 <li><p><strong>Efficiency</strong>: Write code that minimizes time and space complexity where possible.</p></li>
-<li><p><strong>Avoid premature optimization</strong>: Focus first on functionality, then optimize only where performance is actually a bottleneck.</p></li>
+<li><p><strong>But avoid premature optimization!</strong>: Focus first on functionality, then optimize only where performance is actually a bottleneck. Remember Donald Knuth’s quote: “Premature optimizaton is the root of all evil”!</p></li>
 </ul>
-</section>
-<section id="consistent-code-style">
-<h3>7. <strong>Consistent Code Style</strong><a class="headerlink" href="#consistent-code-style" title="Link to this heading">#</a></h3>
+</li>
+<li><p><strong>Consistent Code Style</strong></p>
 <ul class="simple">
 <li><p><strong>Follow style guides</strong>: Adhere to style guides (e.g., PEP 8 for Python) to keep code consistent.</p></li>
 <li><p><strong>Code formatters and linters</strong>: Use automated tools to enforce coding standards and detect errors.</p></li>
 </ul>
-</section>
-<section id="code-reviews">
-<h3>8. <strong>Code Reviews</strong><a class="headerlink" href="#code-reviews" title="Link to this heading">#</a></h3>
+</li>
+<li><p><strong>Code Reviews</strong></p>
 <ul class="simple">
 <li><p><strong>Peer reviews</strong>: Have others review your code to catch issues and get feedback on design and implementation.</p></li>
 <li><p><strong>Collaborative improvement</strong>: Use feedback to refine the code and learn better practices.</p></li>
 </ul>
-</section>
-<section id="avoid-hardcoding-values">
-<h3>9. <strong>Avoid Hardcoding Values</strong><a class="headerlink" href="#avoid-hardcoding-values" title="Link to this heading">#</a></h3>
+</li>
+<li><p><strong>Avoid Hardcoding Values</strong></p>
 <ul class="simple">
 <li><p><strong>Use constants or configuration files</strong>: Keep dynamic values and settings outside the code to avoid hardcoding values directly into the program.</p></li>
 </ul>
-</section>
-<section id="refactor-code-regularly">
-<h3>10. <strong>Refactor Code Regularly</strong><a class="headerlink" href="#refactor-code-regularly" title="Link to this heading">#</a></h3>
+</li>
+<li><p><strong>Refactor Code Regularly</strong></p></li>
+</ol>
 <ul class="simple">
 <li><p><strong>Refactoring</strong>: Continuously improve code by removing redundancies, simplifying logic, or improving structure without changing functionality.</p></li>
 <li><p><strong>Code smell detection</strong>: Watch for patterns that indicate poor design, such as overly complex functions or tightly coupled code, and address them.</p></li>
@@ -552,7 +534,6 @@ practices will be assessed, usually on a weekly basis.</p>
 <li><p>Most importantly, all scripts should run without errors, taking in data and spitting out the results as necessary.</p></li>
 </ul>
 <p>When necessary, more specific, module-specific details on weekly coursework and assessment will be given when relevant.</p>
-</section>
 <section id="pre-submission-practicals-wrap-up">
 <h3>Pre-submission practicals wrap-up<a class="headerlink" href="#pre-submission-practicals-wrap-up" title="Link to this heading">#</a></h3>
 <p>Do this as after you finish with an assignment, and at the end of every week / module, before submission :</p>
@@ -743,6 +724,7 @@ practices will be assessed, usually on a weekly basis.</p>
 <p>Students are encouraged to collaborate on these courses (e.g., CMEE). You may often exchange code snippets (solutions to sub-problems within the bigger problem, if you like) or blocks of code to test them. Also, two implementations of a coding solution / algorithm might often be very convergent and relatively similar. However, unless it is a groupwork practical (see above), extremely similar or identical scripts / code files will be reviewed carefully by markers. To this end, the assessment script will perform a diff on pairs of (non-groupwork) code files to detect “inordinate” degrees of similarity.</p>
 <p><em>Alright, full steam ahead then!</em></p>
 <!-- You could make a separate directory called ``TestData`` as the default input and reference the main Data file in the ``.gitignore`` file (see the `Git Chapter <03-Git.ipynb>`__) -->
+<!-- #endregion -->
 </section>
 </section>
 
@@ -803,16 +785,6 @@ practices will be assessed, usually on a weekly basis.</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#undergraduates">Undergraduates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#masters-students">Masters students</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-clear-readable-code">1. <strong>Write Clear, Readable Code</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modular-code">2. <strong>Modular Code</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-handling">3. <strong>Error Handling</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">4. <strong>Testing</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">5. <strong>Version Control</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-optimization">6. <strong>Code Optimization</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consistent-code-style">7. <strong>Consistent Code Style</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-reviews">8. <strong>Code Reviews</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoid-hardcoding-values">9. <strong>Avoid Hardcoding Values</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#refactor-code-regularly">10. <strong>Refactor Code Regularly</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-submission-practicals-wrap-up">Pre-submission practicals wrap-up</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-weekly-feedback">The Weekly Feedback</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#groupwork">Groupwork</a><ul class="nav section-nav flex-column">
