@@ -2521,7 +2521,7 @@ z            str         88
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">x</span><span class="p">:</span> <span class="c1"># no output because x is an integer</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">x</span><span class="p">:</span> <span class="c1"># no output because x is NOT an integer</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -2587,13 +2587,11 @@ z            str         88
 
 <span class="k">def</span> <span class="nf">foo_3</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
-        <span class="n">tmp</span> <span class="o">=</span> <span class="n">y</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">tmp</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">z</span><span class="p">:</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="p">,</span> <span class="n">x</span>
     <span class="k">if</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">z</span><span class="p">:</span>
-        <span class="n">tmp</span> <span class="o">=</span> <span class="n">z</span>
-        <span class="n">z</span> <span class="o">=</span> <span class="n">y</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">tmp</span>
+        <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="p">,</span> <span class="n">y</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">foo_4</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
