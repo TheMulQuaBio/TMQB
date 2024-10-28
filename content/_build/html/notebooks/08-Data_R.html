@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=3943d584" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
@@ -45,13 +45,10 @@
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/togglebutton.js?v=3e7854f7"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -188,7 +185,6 @@
 <li class="toctree-l1"><a class="reference internal" href="02-ShellScripting.html">Shell scripting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03-Git.html">Version control with Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04-LaTeX.html">Scientific documents with <span class="math notranslate nohighlight">\(\LaTeX\)</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="05-Python.html">Biological Computing in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07-R.html">Biological Computing in R</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Maths for Biologists</span></p>
@@ -1320,7 +1316,7 @@ $ Count       &lt;int&gt; 4, 8, 3, 20, 6, 4, 0, 0, 0, 0, 1, 2, 5, 12, 2, 0, 0, 0
 </ol>
 <p>Both these criteria are programming language-, and computer hardware-dependent, of course. For example, a 32-bit OS can only handle ~2 GB of RAM, so this computer will struggle every time you try to handle a dataset in that size range.</p>
 <p>R reads data into RAM all at once when you using the <code class="docutils literal notranslate"><span class="pre">read.table</span></code> (or its wrapper, <code class="docutils literal notranslate"><span class="pre">read.csv()</span></code> — maybe
-you have realized by now that <code class="docutils literal notranslate"><span class="pre">read.csv()</span></code> is basically calling <code class="docutils literal notranslate"><span class="pre">read.table()</span></code> with a particular set of options. That is, objects in R live in memory entirely, and big-ish data in RAM will cause R to choke. Python has similar problems, but you can circumvent these to an extent by using <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays (see the <span class="xref myst">second Python Chapter</span>).</p>
+you have realized by now that <code class="docutils literal notranslate"><span class="pre">read.csv()</span></code> is basically calling <code class="docutils literal notranslate"><span class="pre">read.table()</span></code> with a particular set of options. That is, objects in R live in memory entirely, and big-ish data in RAM will cause R to choke. Python has similar problems, but you can circumvent these to an extent by using <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays (see the <a class="reference internal" href="#06-Python_II.ipynb"><span class="xref myst">second Python Chapter</span></a>).</p>
 <p>There are a few options (which you can combine, of course) if you are actually using datasets that are so large:</p>
 <ul class="simple">
 <li><p>Import large files smartly; e.g., using <code class="docutils literal notranslate"><span class="pre">scan()</span></code> in R, and then create subsets of the data that you need. Also, use the <code class="docutils literal notranslate"><span class="pre">reshape</span></code> or <code class="docutils literal notranslate"><span class="pre">tidyr</span></code> packages to covert your data in the most “square” (so neither too long or too wide) format as possible. Of course, you will need subsets of data in long format for analysis (see sections above).</p></li>
