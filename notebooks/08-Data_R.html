@@ -185,9 +185,7 @@
 <li class="toctree-l1"><a class="reference internal" href="02-ShellScripting.html">Shell scripting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03-Git.html">Version control with Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04-LaTeX.html">Scientific documents with <span class="math notranslate nohighlight">\(\LaTeX\)</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="05-Python_I.html">Biological Computing in Python I</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07-R.html">Biological Computing in R</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06-Python_II.html">Biological Computing in Python II</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Maths for Biologists</span></p>
 <ul class="nav bd-sidenav">
@@ -1318,7 +1316,7 @@ $ Count       &lt;int&gt; 4, 8, 3, 20, 6, 4, 0, 0, 0, 0, 1, 2, 5, 12, 2, 0, 0, 0
 </ol>
 <p>Both these criteria are programming language-, and computer hardware-dependent, of course. For example, a 32-bit OS can only handle ~2 GB of RAM, so this computer will struggle every time you try to handle a dataset in that size range.</p>
 <p>R reads data into RAM all at once when you using the <code class="docutils literal notranslate"><span class="pre">read.table</span></code> (or its wrapper, <code class="docutils literal notranslate"><span class="pre">read.csv()</span></code> — maybe
-you have realized by now that <code class="docutils literal notranslate"><span class="pre">read.csv()</span></code> is basically calling <code class="docutils literal notranslate"><span class="pre">read.table()</span></code> with a particular set of options. That is, objects in R live in memory entirely, and big-ish data in RAM will cause R to choke. Python has similar problems, but you can circumvent these to an extent by using <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays (see the <a class="reference internal" href="06-Python_II.html"><span class="std std-doc">second Python Chapter</span></a>).</p>
+you have realized by now that <code class="docutils literal notranslate"><span class="pre">read.csv()</span></code> is basically calling <code class="docutils literal notranslate"><span class="pre">read.table()</span></code> with a particular set of options. That is, objects in R live in memory entirely, and big-ish data in RAM will cause R to choke. Python has similar problems, but you can circumvent these to an extent by using <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays (see the <a class="reference internal" href="#06-Python_II.ipynb"><span class="xref myst">second Python Chapter</span></a>).</p>
 <p>There are a few options (which you can combine, of course) if you are actually using datasets that are so large:</p>
 <ul class="simple">
 <li><p>Import large files smartly; e.g., using <code class="docutils literal notranslate"><span class="pre">scan()</span></code> in R, and then create subsets of the data that you need. Also, use the <code class="docutils literal notranslate"><span class="pre">reshape</span></code> or <code class="docutils literal notranslate"><span class="pre">tidyr</span></code> packages to covert your data in the most “square” (so neither too long or too wide) format as possible. Of course, you will need subsets of data in long format for analysis (see sections above).</p></li>

@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/07-R';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Biological Computing in Python II" href="06-Python_II.html" />
-    <link rel="prev" title="Biological Computing in Python I" href="05-Python_I.html" />
+    <link rel="next" title="01 - Making mathematical statements" href="../mathscourse/lecture01/01_Making_mathematical_statements.html" />
+    <link rel="prev" title="Biological Computing in Python" href="05-Python.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -185,9 +185,8 @@
 <li class="toctree-l1"><a class="reference internal" href="02-ShellScripting.html">Shell scripting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03-Git.html">Version control with Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04-LaTeX.html">Scientific documents with <span class="math notranslate nohighlight">\(\LaTeX\)</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="05-Python_I.html">Biological Computing in Python I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-Python.html">Biological Computing in Python</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Biological Computing in R</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06-Python_II.html">Biological Computing in Python II</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Maths for Biologists</span></p>
 <ul class="nav bd-sidenav">
@@ -620,7 +619,7 @@ document.write(`
 <figure class="align-default" id="r-linux-console">
 <a class="reference internal image-reference" href="../_images/R_Linux.png"><img alt="R in UNIX/Linux" src="../_images/R_Linux.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text"><strong>The R console in Linux/Unix.</strong></span><a class="headerlink" href="#r-linux-console" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text"><strong>The R console in Linux/Unix.</strong></span><a class="headerlink" href="#r-linux-console" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Or like this (Windows “console”, similar in Mac):</p>
@@ -628,7 +627,7 @@ document.write(`
 <figure class="align-default" id="r-windows-console">
 <a class="reference internal image-reference" href="../_images/R_terminal.jpg"><img alt="R in Windows" src="../_images/R_terminal.jpg" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text"><strong>The R console in Windows/Mac OS.</strong></span><a class="headerlink" href="#r-windows-console" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text"><strong>The R console in Windows/Mac OS.</strong></span><a class="headerlink" href="#r-windows-console" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -770,7 +769,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output text_html">2</div></div>
 </div>
-<p>Thus, a <em>vector</em> is like a single column or row in a <em>spreadsheet</em> (just like it is in <a class="reference internal" href="05-Python_I.html"><span class="std std-doc">Python</span></a>). Multiple vectors can be combined to make a matrix (the full spreadsheet).</p>
+<p>Thus, a <em>vector</em> is like a single column or row in a <em>spreadsheet</em> (just like it is in <a class="reference internal" href="#05-Python_I.ipynb"><span class="xref myst">Python</span></a>). Multiple vectors can be combined to make a matrix (the full spreadsheet).</p>
 <p>This is one of many ways R stores and processes data. More on R data types and objects below.</p>
 <p>A single value (any kind) is a vector object of length 1 by default. That’s why in the R console you see <code class="docutils literal notranslate"><span class="pre">[1]</span></code> before any single-value output (e.g., type <code class="docutils literal notranslate"><span class="pre">8</span></code>, and you will see <code class="docutils literal notranslate"><span class="pre">[1]</span> <span class="pre">8</span></code>).</p>
 <p>Some examples of operations on vectors:</p>
@@ -3071,7 +3070,7 @@ text), and Boolean (“logical”; <code class="docutils literal notranslate"><s
 <figure class="align-default" id="r-project-org">
 <a class="reference internal image-reference" href="../_images/RWorkflow.png"><img alt="R Project Organization" src="../_images/RWorkflow.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text"><strong>Your R project.</strong> Keeping it neat and organized if the key to becoming a good R programmer.</span><a class="headerlink" href="#r-project-org" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text"><strong>Your R project.</strong> Keeping it neat and organized if the key to becoming a good R programmer.</span><a class="headerlink" href="#r-project-org" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <hr class="docutils" />
@@ -3160,7 +3159,7 @@ text), and Boolean (“logical”; <code class="docutils literal notranslate"><s
 your R Workspace during the current R session. But the main thing is, you should be able to see a <code class="docutils literal notranslate"><span class="pre">MyData</span></code> in the list of objects printed.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can list only objects with a particular name pattern by using the <code class="docutils literal notranslate"><span class="pre">pattern</span></code> option of <code class="docutils literal notranslate"><span class="pre">ls()</span></code>. It works by using regular expressions, which you were introduced through the <code class="docutils literal notranslate"><span class="pre">grep</span></code> command in the <a class="reference internal" href="01-Unix.html#using-grep"><span class="std std-ref">UNIX chapter</span></a>. We will delve deeper into regular expressions in the <a class="reference internal" href="06-Python_II.html#python-ii-python-regex"><span class="std std-ref">Python II Chapter</span></a>.</p>
+<p>You can list only objects with a particular name pattern by using the <code class="docutils literal notranslate"><span class="pre">pattern</span></code> option of <code class="docutils literal notranslate"><span class="pre">ls()</span></code>. It works by using regular expressions, which you were introduced through the <code class="docutils literal notranslate"><span class="pre">grep</span></code> command in the <a class="reference internal" href="01-Unix.html#using-grep"><span class="std std-ref">UNIX chapter</span></a>. We will delve deeper into regular expressions in the <a class="reference internal" href="05-Python.html#python-ii-python-regex"><span class="std std-ref">Python II Chapter</span></a>.</p>
 </div>
 <p>Note that the resulting <code class="docutils literal notranslate"><span class="pre">MyData</span></code> object in your workspace is a R dataframe:</p>
 <div class="cell docutils container">
@@ -3414,7 +3413,7 @@ your R Workspace during the current R session. But the main thing is, you should
 <section id="using-rscript">
 <h3>Using <code class="docutils literal notranslate"><span class="pre">Rscript</span></code><a class="headerlink" href="#using-rscript" title="Link to this heading">#</a></h3>
 <p>You can also run R script from the UNIX/Linux terminal by calling <code class="docutils literal notranslate"><span class="pre">Rscript</span></code>. That is, while you have to be inside an R session to use the <code class="docutils literal notranslate"><span class="pre">source</span></code> command to run a script, you can run a R script directly from the UNIX/Linux terminal by calling <code class="docutils literal notranslate"><span class="pre">Rscript</span></code>.</p>
-<p>This allows you to easily automate execution of your R scripts (e.g., by writing a bash script) and integrate R into a bigger computing pipeline/workflow by calling it through other tools or languages (e.g., see the <a class="reference internal" href="06-Python_II.html"><span class="std std-doc">Python Chapter II</span></a>).</p>
+<p>This allows you to easily automate execution of your R scripts (e.g., by writing a bash script) and integrate R into a bigger computing pipeline/workflow by calling it through other tools or languages (e.g., see the <a class="reference internal" href="#06-Python_II.ipynb"><span class="xref myst">Python Chapter II</span></a>).</p>
 <p>If you are on Linux, try using <code class="docutils literal notranslate"><span class="pre">Rscript</span></code> to run <code class="docutils literal notranslate"><span class="pre">basic_io.R</span></code>:</p>
 <ul class="simple">
 <li><p>Exit from the R console using <code class="docutils literal notranslate"><span class="pre">ctrl+D</span></code>, or open a new bash terminal</p></li>
@@ -3456,7 +3455,7 @@ your R Workspace during the current R session. But the main thing is, you should
 </div>
 </div>
 </div>
-<p>Note that using <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(a)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(a</span> <span class="pre">==</span> <span class="pre">TRUE)</span></code> will also achieve the same result, because <code class="docutils literal notranslate"><span class="pre">a</span></code> is a Boolean variable. Compare with  <a class="reference internal" href="05-Python_I.html#python-conditionals"><span class="std std-ref">Python conditionals</span></a>.</p>
+<p>Note that using <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(a)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(a</span> <span class="pre">==</span> <span class="pre">TRUE)</span></code> will also achieve the same result, because <code class="docutils literal notranslate"><span class="pre">a</span></code> is a Boolean variable. Compare with  <a class="reference internal" href="05-Python.html#python-conditionals"><span class="std std-ref">Python conditionals</span></a>.</p>
 <p>In general, it is arguably a good idea to make explicit the <code class="docutils literal notranslate"><span class="pre">if</span></code> condition though.</p>
 <p>You can also write an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement on a single line:</p>
 <div class="cell docutils container">
@@ -3470,7 +3469,7 @@ your R Workspace during the current R session. But the main thing is, you should
 <p>But code readability is important, so avoid squeezing control flow blocks like this into a single line.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Please indent your code for readability, even if its not strictly necessary (unlike <a class="reference internal" href="05-Python_I.html"><span class="std std-doc">Python</span></a>). Indentation helps you see the flow of the logic, rather than flattened version, which is hard for you and anybody else to read. For example, the following code block is so much much readable than the one above:</p>
+<p>Please indent your code for readability, even if its not strictly necessary (unlike <a class="reference internal" href="#./05-Python_I.ipynb"><span class="xref myst">Python</span></a>). Indentation helps you see the flow of the logic, rather than flattened version, which is hard for you and anybody else to read. For example, the following code block is so much much readable than the one above:</p>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">runif</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
 <span class="nf">if </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nf">print </span><span class="p">(</span><span class="s">&quot;Less than a half&quot;</span><span class="p">)</span>
@@ -3528,7 +3527,7 @@ your R Workspace during the current R session. But the main thing is, you should
 <p>Then, <code class="docutils literal notranslate"><span class="pre">j</span></code> is a temporary variable that stores the value of the number (the other temporary variable, <code class="docutils literal notranslate"><span class="pre">i</span></code>) in that iteration of the loop.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Using the <code class="docutils literal notranslate"><span class="pre">:</span></code> operator or the <code class="docutils literal notranslate"><span class="pre">seq()</span></code> function pre-generates the sequence and stores it in memory, so is less efficient that Python’s <a class="reference internal" href="05-Python_I.html#python-loops"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">range</span></code> function</span></a>, which generates numbers in a sequence on a “need-to” basis.</p>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">:</span></code> operator or the <code class="docutils literal notranslate"><span class="pre">seq()</span></code> function pre-generates the sequence and stores it in memory, so is less efficient that Python’s <a class="reference internal" href="05-Python.html#python-loops"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">range</span></code> function</span></a>, which generates numbers in a sequence on a “need-to” basis.</p>
 </div>
 <p>You can also loop over a vector of strings:</p>
 <div class="cell docutils container">
@@ -3854,7 +3853,7 @@ The syntax for R functions is quite simple, with each function accepting “argu
 </section>
 <section id="groupwork-practical-on-tree-heights-2">
 <h3>Groupwork Practical  on Tree Heights  2<a class="headerlink" href="#groupwork-practical-on-tree-heights-2" title="Link to this heading">#</a></h3>
-<p>Assuming you have already worked through <a class="reference internal" href="05-Python_I.html"><span class="std std-doc">Python Chapter I</span></a>, write a Python version of <code class="docutils literal notranslate"><span class="pre">get_TreeHeight.R</span></code> (call it <code class="docutils literal notranslate"><span class="pre">get_TreeHeight.py</span></code>). Include a test of this script into <code class="docutils literal notranslate"><span class="pre">run_get_TreeHeight.sh</span></code>.</p>
+<p>Assuming you have already worked through <a class="reference internal" href="#./05-Python_I.ipynb"><span class="xref myst">Python Chapter I</span></a>, write a Python version of <code class="docutils literal notranslate"><span class="pre">get_TreeHeight.R</span></code> (call it <code class="docutils literal notranslate"><span class="pre">get_TreeHeight.py</span></code>). Include a test of this script into <code class="docutils literal notranslate"><span class="pre">run_get_TreeHeight.sh</span></code>.</p>
 </section>
 </section>
 <section id="vectorization">
@@ -4586,15 +4585,15 @@ for examples.    There you will also see a comparison of speed of <code class="d
 </section>
 <section id="errors-and-debugging">
 <h2>Errors and Debugging<a class="headerlink" href="#errors-and-debugging" title="Link to this heading">#</a></h2>
-<p>As we learned in <a class="reference internal" href="05-Python_I.html#python-errors"><span class="std std-ref">Python Chapter I</span></a>, dealing with errors is a fundamental programming task that never really goes away!</p>
+<p>As we learned in <a class="reference internal" href="05-Python.html#python-errors"><span class="std std-ref">Python Chapter I</span></a>, dealing with errors is a fundamental programming task that never really goes away!</p>
 <section id="unit-testing">
 <h3>Unit testing<a class="headerlink" href="#unit-testing" title="Link to this heading">#</a></h3>
-<p>We will not cover unit testing here, which we <a class="reference internal" href="05-Python_I.html#python-errors"><span class="std std-ref">did in Python Chapter I</span></a>). Unit testing in R is equally recommended if you are going to develop complex code and packages.</p>
+<p>We will not cover unit testing here, which we <a class="reference internal" href="05-Python.html#python-errors"><span class="std std-ref">did in Python Chapter I</span></a>). Unit testing in R is equally recommended if you are going to develop complex code and packages.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>A very convenient tool for R unit testing is <a class="reference external" href="https://testthat.r-lib.org"><code class="docutils literal notranslate"><span class="pre">testthat</span></code></a>.</p>
 </div>
-<p>In addition, you can use other “<a class="reference external" href="https://en.wikipedia.org/wiki/Defensive_programming">defensive programming</a>” methods in R to keep an eye on errors that might arise in special circumstances in an complex program. A good option for this is to convert warnings to errors using the <a class="reference external" href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/stopifnot.html"><code class="docutils literal notranslate"><span class="pre">stopifnot()</span></code></a>. This is a bit like <code class="docutils literal notranslate"><span class="pre">try</span></code> (which we will cover below, and we also covered in <a class="reference internal" href="05-Python_I.html#python-errors"><span class="std std-ref">Python Chapter I</span></a>).</p>
+<p>In addition, you can use other “<a class="reference external" href="https://en.wikipedia.org/wiki/Defensive_programming">defensive programming</a>” methods in R to keep an eye on errors that might arise in special circumstances in an complex program. A good option for this is to convert warnings to errors using the <a class="reference external" href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/stopifnot.html"><code class="docutils literal notranslate"><span class="pre">stopifnot()</span></code></a>. This is a bit like <code class="docutils literal notranslate"><span class="pre">try</span></code> (which we will cover below, and we also covered in <a class="reference internal" href="05-Python.html#python-errors"><span class="std std-ref">Python Chapter I</span></a>).</p>
 </section>
 <section id="debugging">
 <h3>Debugging<a class="headerlink" href="#debugging" title="Link to this heading">#</a></h3>
@@ -4631,7 +4630,7 @@ for examples.    There you will also see a comparison of speed of <code class="d
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>We will not cover advanced debugging here as we did <a class="reference internal" href="05-Python_I.html#python-errors"><span class="std std-ref">in Python Chapter I</span></a>, but look up <code class="docutils literal notranslate"><span class="pre">traceback()</span></code> (to find where the errors(s) are when a program crashes), and <code class="docutils literal notranslate"><span class="pre">debug()</span></code> (to debug a whole function).</p>
+<p>We will not cover advanced debugging here as we did <a class="reference internal" href="05-Python.html#python-errors"><span class="std std-ref">in Python Chapter I</span></a>, but look up <code class="docutils literal notranslate"><span class="pre">traceback()</span></code> (to find where the errors(s) are when a program crashes), and <code class="docutils literal notranslate"><span class="pre">debug()</span></code> (to debug a whole function).</p>
 </div>
 </section>
 <section id="catching-errors">
@@ -5040,20 +5039,20 @@ Error in doit(popn) : Couldn&#39;t calculate mean: too few unique values!
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="05-Python_I.html"
+       href="05-Python.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Biological Computing in Python I</p>
+        <p class="prev-next-title">Biological Computing in Python</p>
       </div>
     </a>
     <a class="right-next"
-       href="06-Python_II.html"
+       href="../mathscourse/lecture01/01_Making_mathematical_statements.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Biological Computing in Python II</p>
+        <p class="prev-next-title">01 - Making mathematical statements</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
