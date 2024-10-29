@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=3943d584" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
@@ -45,13 +45,10 @@
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/togglebutton.js?v=3e7854f7"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -63,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Appendix-Maths';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Databases" href="Appendix-Databases.html" />
+    <link rel="next" title="Databases " href="Appendix-Databases.html" />
     <link rel="prev" title="Data analyses with Python &amp; Jupyter" href="Appendix-Data-Python.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -188,9 +185,7 @@
 <li class="toctree-l1"><a class="reference internal" href="02-ShellScripting.html">Shell scripting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03-Git.html">Version control with Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04-LaTeX.html">Scientific documents with <span class="math notranslate nohighlight">\(\LaTeX\)</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="05-Python_I.html">Biological Computing in Python I</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07-R.html">Biological Computing in R</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06-Python_II.html">Biological Computing in Python II</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Maths for Biologists</span></p>
 <ul class="nav bd-sidenav">
@@ -1379,8 +1374,8 @@ SymPy has predefined expressions for a number of mathematical constants, such as
 <section id="one-population-exponential-growth">
 <h3>One population: Exponential growth<a class="headerlink" href="#one-population-exponential-growth" title="Link to this heading">#</a></h3>
 <p>Let’s look at how populations grow when there are no environmental constraints. The differential equation model is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c5275be1-5e42-4730-9c9c-7fdc6b63ca76">
-<span class="eqno">(11)<a class="headerlink" href="#equation-c5275be1-5e42-4730-9c9c-7fdc6b63ca76" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:exp_growth}
+<div class="amsmath math notranslate nohighlight" id="equation-46996e2b-1a32-4804-96e3-f73f88df41d4">
+<span class="eqno">(6)<a class="headerlink" href="#equation-46996e2b-1a32-4804-96e3-f73f88df41d4" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:exp_growth}
 	\frac{\text{d}N}{\text{d}t} = r_m N
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(r_m\)</span> is the intrinsic, constant rate of population gowth (units of 1/time), and <span class="math notranslate nohighlight">\(N\)</span> is population size (or biomass abundance). I use the subscript <span class="math notranslate nohighlight">\(m\)</span> in <span class="math notranslate nohighlight">\(r_m\)</span> to denote both <a class="reference external" href="https://en.wikipedia.org/wiki/Malthusianism">Malthusian</a> and maximal population growth rate because, in theory, without any constraints, this growth rate is expected to at its theoretical/biological maximum.</p>
@@ -1441,8 +1436,8 @@ SymPy has predefined expressions for a number of mathematical constants, such as
 <div class="math notranslate nohighlight">
 \[C_1 = N_0\]</div>
 <p>That is,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-606607a4-3b00-4c18-a487-07e6fa119535">
-<span class="eqno">(12)<a class="headerlink" href="#equation-606607a4-3b00-4c18-a487-07e6fa119535" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:exp_growth_sol}
+<div class="amsmath math notranslate nohighlight" id="equation-6cf6d36c-f572-46ed-84e9-dc91e9c07a81">
+<span class="eqno">(7)<a class="headerlink" href="#equation-6cf6d36c-f572-46ed-84e9-dc91e9c07a81" title="Permalink to this equation">#</a></span>\[\begin{equation}\label{eq:exp_growth_sol}
 N{\left (t \right )} = N_0 e^{r_m t}
 \end{equation}\]</div>
 <p>We could use Sympy for this last step as well (using <code class="docutils literal notranslate"><span class="pre">subs()</span></code> like you learned above), but that would be just plain silly – like using a sledge-hammer to drive in a nail!</p>
@@ -1513,7 +1508,7 @@ N{\left (t \right )} = N_0 e^{r_m t}
 <span id="logistic-population-growth"></span><h3>One population: Logistic Population growth<a class="headerlink" href="#one-population-logistic-population-growth" title="Link to this heading">#</a></h3>
 <p>Populations eventually run into contraints, even if they can grow exponentially at the start (eqn \ref{eq:exp_growth}). The classical model for logistic growth in population density (<span class="math notranslate nohighlight">\(N\)</span>) captures this dynamic:</p>
 <div class="math notranslate nohighlight" id="equation-eq-logist-growth">
-<span class="eqno">(13)<a class="headerlink" href="#equation-eq-logist-growth" title="Link to this equation">#</a></span>\[
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq-logist-growth" title="Link to this equation">#</a></span>\[
 	\frac{\text{d}N}{\text{d}t} = r_m N \left(1-\frac{N}{K}\right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(K\)</span> is the carrying capacity of the environment, while <span class="math notranslate nohighlight">\(r_m\)</span> is the same parameter same as above. Let’s solve this one as well.</p>
@@ -1550,8 +1545,8 @@ N{\left (t \right )} = N_0 e^{r_m t}
 </div>
 </div>
 <p>This is a bit more complicated than the solution for exponential growth above. But we can solve it the same way. First substitute <span class="math notranslate nohighlight">\(t = 0\)</span>, and then solve the resulting equation for the initital condition of <span class="math notranslate nohighlight">\(N_0\)</span>, which then gives This the time-dependent solution:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-20f9d367-2ec1-41fc-bb8f-dff6b1a23bee">
-<span class="eqno">(14)<a class="headerlink" href="#equation-20f9d367-2ec1-41fc-bb8f-dff6b1a23bee" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-19406e3b-33b3-4d20-983d-0d885856540f">
+<span class="eqno">(9)<a class="headerlink" href="#equation-19406e3b-33b3-4d20-983d-0d885856540f" title="Permalink to this equation">#</a></span>\[\begin{equation}
     N_t = \frac{N_0 K\mathrm{e}^{r_m t}}{K + N_0(\mathrm{e}^{r_m t}-1)}
 \end{equation}\]</div>
 <p>You can do the last steps to obtain this solution using Sympy as well (I leave it to you to try it).</p>
@@ -1595,8 +1590,8 @@ N{\left (t \right )} = N_0 e^{r_m t}
 <section id="two-interacting-populations-the-lotka-volterra-predator-prey-model">
 <h3>Two interacting populations: The Lotka-Volterra predator-prey model<a class="headerlink" href="#two-interacting-populations-the-lotka-volterra-predator-prey-model" title="Link to this heading">#</a></h3>
 <p>Now for the classical Lotka-Volterra model that you encountered in the advanced Python week (without logistic growth for the consumer, <span class="math notranslate nohighlight">\(C\)</span>).</p>
-<div class="amsmath math notranslate nohighlight" id="equation-756b81bf-129f-4ee3-ac60-879795879d1c">
-<span class="eqno">(15)<a class="headerlink" href="#equation-756b81bf-129f-4ee3-ac60-879795879d1c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-eedb3484-10dc-4699-a144-ab7b70593d19">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eedb3484-10dc-4699-a144-ab7b70593d19" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{dN}{dt} &amp;= r_m N \left(1-\frac{N}{K}\right) - a N C\\
 \frac{dC}{dt} &amp;= e a N C - z C
 \end{align}\]</div>

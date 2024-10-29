@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=3943d584" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
@@ -45,13 +45,10 @@
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/togglebutton.js?v=3e7854f7"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -188,9 +185,7 @@
 <li class="toctree-l1"><a class="reference internal" href="02-ShellScripting.html">Shell scripting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03-Git.html">Version control with Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04-LaTeX.html">Scientific documents with <span class="math notranslate nohighlight">\(\LaTeX\)</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="05-Python_I.html">Biological Computing in Python I</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07-R.html">Biological Computing in R</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06-Python_II.html">Biological Computing in Python II</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Maths for Biologists</span></p>
 <ul class="nav bd-sidenav">
@@ -495,7 +490,7 @@ document.write(`
 <h1>The Computing Miniproject<a class="headerlink" href="#the-computing-miniproject" title="Link to this heading">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>The computing Miniproject gives you an opportunity to try the “whole nine yards” of <em>asking and answering</em> a scientific question in biology (potentially involving multiple sub-questions/hypotheses) in a <strong>fully reproducible way</strong>. It will in essence give you an opportunity to perform a useful “dry run” of executing your actual Dissertation project. <em>It is an opportunity to do apply the computational methods you have been learning to a biological problem.</em></p>
+<p>The computing Miniproject gives you an opportunity to try the “whole nine yards” of <em>asking and answering</em> a scientific question in biology (potentially involving multiple sub-questions/hypotheses) in a <strong>fully reproducible way</strong>. It will in essence give you an opportunity to perform a useful “dry run” of executing your actual Dissertation project. <em>It is an opportunity to apply the computational methods you have been learning to a biological problem.</em></p>
 </section>
 <section id="objectives">
 <h2>Objectives<a class="headerlink" href="#objectives" title="Link to this heading">#</a></h2>
@@ -509,7 +504,7 @@ document.write(`
 <ol class="arabic simple">
 <li><p><strong>It employs the biological computing tools you have learned so far <em>as necessary</em></strong>: Shell (bash) scripting, Git, LaTeX, R, and Python. Using these tools, you will build a workflow that starts with the data and ends with a written report (in LaTeX). How you choose the different tools (e.g., how much Python vs R) is your choice; that is part of what will be assessed.</p></li>
 <li><p><strong>Fits and compares <em>at least</em> two alternative mathematical models to the data</strong>. The models should be fitted and selected using an appropriate method. For example you may use a combination of Ordinary Linear and Nonlinear Least Squares (NLLS) methods to fit <span class="math notranslate nohighlight">\(\ge 2\)</span> alternative models to data, followed by model selection using AIC and BIC.</p></li>
-<li><p><strong>It should be fully reproducible.</strong> You will write a script that “glues” the workflow together and runs it, from data processing, to model fitting, to plotting, to compilation of the written report (<em>More detailed instructions on report below</em>). Refer back to the TheMulQuaBio Computing chapters to see how you would run the different components. For example, we have covered how to run R and compile <span class="math notranslate nohighlight">\(\LaTeX\)</span> using the <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> module in the <a class="reference internal" href="06-Python_II.html"><span class="std std-doc">second Python Chapter</span></a>. The assessor should be able to run just this script to get everything to work without errors.</p></li>
+<li><p><strong>It should be fully reproducible.</strong> You will write a script that “glues” the workflow together and runs it, from data processing, to model fitting, to plotting, to compilation of the written report (<em>More detailed instructions on report below</em>). Refer back to the TheMulQuaBio Computing chapters to see how you would run the different components. For example, we have covered how to run R and compile <span class="math notranslate nohighlight">\(\LaTeX\)</span> using the <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> module in the <a class="reference internal" href="#./06-Python_II.ipynb"><span class="xref myst">second Python Chapter</span></a>. The assessor should be able to run just this script to get everything to work without errors.</p></li>
 </ol>
 <p><em>You will be given lectures and practicals on model fitting using least squares before you start on your Miniproject.</em></p>
 <p><em>Please read the papers in the <strong>Readings &amp; Resources</strong> section below</em> (and in particular, the Johnson and Omland 2005 paper) — these will help orient you in the right direction for tackling your Miniproject.</p>
@@ -2010,32 +2005,32 @@ document.write(`
 <span id="id3"></span><h4>The Models<a class="headerlink" href="#miniproject-fr-models" title="Link to this heading">#</a></h4>
 <p><em>All the following parameters and variables are in SI units</em>.</p>
 <p>The fundamental measure of interest (the response variable) is consumption rate (<span class="math notranslate nohighlight">\(c\)</span>). This is expressed in terms of biomass quantity or number of individuals of resource consumed <em>per unit time per unit consumer</em> (so units of Mass (or Individuals) / Time).</p>
-<p>Again, the simplest mathematical models you can use are the phenomenological quadratic and cubic polynomial models, that is eqns. <a class="reference internal" href="#equation-eq-quad">(18)</a> and <a class="reference internal" href="#equation-eq-cubic">(19)</a> (replace <span class="math notranslate nohighlight">\(x\)</span> with resource abundance).</p>
+<p>Again, the simplest mathematical models you can use are the phenomenological quadratic and cubic polynomial models, that is eqns. <a class="reference internal" href="#equation-eq-quad">(13)</a> and <a class="reference internal" href="#equation-eq-cubic">(14)</a> (replace <span class="math notranslate nohighlight">\(x\)</span> with resource abundance).</p>
 <p>Then, there is the more mechanistic Holling Type II model (Holling, 1959):</p>
 <div class="math notranslate nohighlight" id="equation-eq-fr-ii">
-<span class="eqno">(16)<a class="headerlink" href="#equation-eq-fr-ii" title="Link to this equation">#</a></span>\[
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-fr-ii" title="Link to this equation">#</a></span>\[
       c = \frac{a x_R}{1 + h a x_R}
 \]</div>
 <p>Here, <span class="math notranslate nohighlight">\(x_R\)</span> is resource density (Mass / Area or Volume), <span class="math notranslate nohighlight">\(a\)</span> is consumer’s search rate (Area or Volume / Time ), and  <span class="math notranslate nohighlight">\(h\)</span> is handling time of the consumer for that resource (time taken to overpower and ingest it).</p>
 <p>Below is an example FR curve from the dataset you have been given with the Type II model fitted to it.</p>
 <hr class="docutils" />
 <p><img alt="image" src="../_images/3_FR.svg" />
-<small>  <center> Example of the a Type II model (eqn. <a class="reference internal" href="#equation-eq-fr-ii">(16)</a>) fitted to a functional response of a consumer on a resource.</p>
+<small>  <center> Example of the a Type II model (eqn. <a class="reference internal" href="#equation-eq-fr-ii">(11)</a>) fitted to a functional response of a consumer on a resource.</p>
 </center> </small>
 <hr class="docutils" />
 <p>There is also the less-mechanistic “generalized” functional response model:</p>
 <div class="math notranslate nohighlight" id="equation-eq-fr-gen">
-<span class="eqno">(17)<a class="headerlink" href="#equation-eq-fr-gen" title="Link to this equation">#</a></span>\[
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-fr-gen" title="Link to this equation">#</a></span>\[
       c = \frac{a x_R^{q + 1}}{1 + h a x_R^{q + 1}}
 \]</div>
-<p>Where everything is same as eqn. <a class="reference internal" href="#equation-eq-fr-ii">(16)</a>, but the additional parameter <span class="math notranslate nohighlight">\(q\)</span> (dimensionless) is a shape parameter that allows the shape of the response to be more flexible/variable, from “Type I” to “Type III”. This model is less mechanistic because it includes a phenomenological parameter <span class="math notranslate nohighlight">\(q\)</span> which does not have a formal biological meaning.</p>
+<p>Where everything is same as eqn. <a class="reference internal" href="#equation-eq-fr-ii">(11)</a>, but the additional parameter <span class="math notranslate nohighlight">\(q\)</span> (dimensionless) is a shape parameter that allows the shape of the response to be more flexible/variable, from “Type I” to “Type III”. This model is less mechanistic because it includes a phenomenological parameter <span class="math notranslate nohighlight">\(q\)</span> which does not have a formal biological meaning.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Note that if <span class="math notranslate nohighlight">\(q=0\)</span>, eqn <a class="reference internal" href="#equation-eq-fr-gen">(17)</a> becomes same as the Type II model (eqn. <a class="reference internal" href="#equation-eq-fr-ii">(16)</a>).</p>
+<p>Note that if <span class="math notranslate nohighlight">\(q=0\)</span>, eqn <a class="reference internal" href="#equation-eq-fr-gen">(12)</a> becomes same as the Type II model (eqn. <a class="reference internal" href="#equation-eq-fr-ii">(11)</a>).</p>
 </div>
 <hr class="docutils" />
 <p><img alt="image" src="../_images/FR.svg" />
-<small> <center> The range of functional responses captured by the generalized functional response model (eqn. <a class="reference internal" href="#equation-eq-fr-gen">(17)</a>).</p>
+<small> <center> The range of functional responses captured by the generalized functional response model (eqn. <a class="reference internal" href="#equation-eq-fr-gen">(12)</a>).</p>
 </center>
 </small>
 <hr class="docutils" />
@@ -2579,17 +2574,17 @@ document.write(`
 <p><em>All the following parameters and variables are in SI units</em>.</p>
 <p>There are multiple models that might best describe these data. The simplest are the general quadratic and cubic polynomial models:</p>
 <div class="math notranslate nohighlight" id="equation-eq-quad">
-<span class="eqno">(18)<a class="headerlink" href="#equation-eq-quad" title="Link to this equation">#</a></span>\[
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq-quad" title="Link to this equation">#</a></span>\[
     B = B_0 + B_1 x + B_2 x^2
 \]</div>
 <div class="math notranslate nohighlight" id="equation-eq-cubic">
-<span class="eqno">(19)<a class="headerlink" href="#equation-eq-cubic" title="Link to this equation">#</a></span>\[
+<span class="eqno">(14)<a class="headerlink" href="#equation-eq-cubic" title="Link to this equation">#</a></span>\[
     B = B_0 + B_1 x + B_2 x^2 + B_3 x^3
 \]</div>
 <p>These are phenomenological models, with the parameters <span class="math notranslate nohighlight">\(B_0\)</span>, <span class="math notranslate nohighlight">\(B_1\)</span>, <span class="math notranslate nohighlight">\(B_2\)</span> and <span class="math notranslate nohighlight">\(B_3\)</span> lacking any mechanistic interpretation. <span class="math notranslate nohighlight">\(x\)</span> is the independent variable (in this case Temperature, <span class="math notranslate nohighlight">\(T\)</span>)</p>
 <p>Another phenomenological model option is the Briere model:</p>
 <div class="math notranslate nohighlight" id="equation-eq-briere1">
-<span class="eqno">(20)<a class="headerlink" href="#equation-eq-briere1" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq-briere1" title="Link to this equation">#</a></span>\[\begin{split}
 B = \left\{
         \begin{array}{ll}
             0 &amp; \quad T \leq T_0 \\
@@ -2612,7 +2607,7 @@ B = \left\{
 \end{split}\]</div>
 <p>In contrast, the Schoolfield model (Schoolfield et al 1981) is a mechanistic option that is based upon thermodynamics and enzyme kinetics:</p>
 <div class="math notranslate nohighlight" id="equation-eq-schoolf">
-<span class="eqno">(21)<a class="headerlink" href="#equation-eq-schoolf" title="Link to this equation">#</a></span>\[
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq-schoolf" title="Link to this equation">#</a></span>\[
     B = \frac{B_0 e^{\frac{-E}{k} (\frac{1}{T} - \frac{1}{283.15})}}
     { 1 + e^{\frac{E_l}{k} (\frac{1}{T_l} - \frac{1}{T})} + 
     e^{\frac{E_h}{k} (\frac{1}{T_h} - \frac{1}{T})}}
@@ -2622,21 +2617,21 @@ enzyme’s high-temperature de-activation energy (eV) which controls the behavio
 <p><em>Please also have a look at the Delong et al 2017 paper, which lists this and other mechanistic TPC models</em> (see <a class="reference internal" href="#miniproj-readings"><span class="std std-ref">Readings &amp; Resources</span></a>). You may choose additional models listed in that paper for comparison, if you want.</p>
 <hr class="docutils" />
 <p><img alt="image" src="../_images/SchoolfEx.png" />
-<small> <center>Example of the full Sharpe-Schoolfield model (Eqn. <a class="reference internal" href="#equation-eq-schoolf">(21)</a>) fitted to the thermal response curve of a metabolic trait <span class="math notranslate nohighlight">\(x\)</span> with resource abundance. </center> </small></p>
+<small> <center>Example of the full Sharpe-Schoolfield model (Eqn. <a class="reference internal" href="#equation-eq-schoolf">(16)</a>) fitted to the thermal response curve of a metabolic trait <span class="math notranslate nohighlight">\(x\)</span> with resource abundance. </center> </small></p>
 <hr class="docutils" />
 <p>In many cases, a simplified Schoolfield model would be more appropriate for thermal response data, because low temperature inactivation is weak, or is undetectable in the data because low-temperature measurements were not made.</p>
 <div class="math notranslate nohighlight" id="equation-eq-schoolfh">
-<span class="eqno">(22)<a class="headerlink" href="#equation-eq-schoolfh" title="Link to this equation">#</a></span>\[
+<span class="eqno">(17)<a class="headerlink" href="#equation-eq-schoolfh" title="Link to this equation">#</a></span>\[
       B = \frac{B_0 e^{\frac{-E}{k} (\frac{1}{T} - \frac{1}{283.15})}}
     { 1 +  e^{\frac{E_h}{k} (\frac{1}{T_h} - \frac{1}{T})}}
 \]</div>
 <p>In other cases, a different simplified Schoolfield model would be more appropriate, because high temperature inactivation was not detectable in the data because measurements were not made at sufficiently high temperatures:</p>
 <div class="math notranslate nohighlight" id="equation-eq-schoolfl">
-<span class="eqno">(23)<a class="headerlink" href="#equation-eq-schoolfl" title="Link to this equation">#</a></span>\[
+<span class="eqno">(18)<a class="headerlink" href="#equation-eq-schoolfl" title="Link to this equation">#</a></span>\[
       B = \frac{B_0 e^{\frac{-E}{k} (\frac{1}{T} - \frac{1}{283.15})}}
     { 1 +  e^{\frac{E_l}{k} (\frac{1}{T_l} - \frac{1}{T})}}
 \]</div>
-<p>Note that the cubic model (Eqn. <a class="reference internal" href="#equation-eq-cubic">(19)</a>) has the same number of parameters as the the reduced Schoolfield models (Eqn. <a class="reference internal" href="#equation-eq-schoolfh">(22)</a> &amp; <a class="reference internal" href="#equation-eq-schoolfl">(23)</a>). Also, the temperature parameter (<span class="math notranslate nohighlight">\(T\)</span>) of the cubic model (Eqn. <a class="reference internal" href="#equation-eq-cubic">(19)</a>) is in <span class="math notranslate nohighlight">\(^\circ\)</span>C, whereas the Temperature parameter in the Schoolfield model is in K.</p>
+<p>Note that the cubic model (Eqn. <a class="reference internal" href="#equation-eq-cubic">(14)</a>) has the same number of parameters as the the reduced Schoolfield models (Eqn. <a class="reference internal" href="#equation-eq-schoolfh">(17)</a> &amp; <a class="reference internal" href="#equation-eq-schoolfl">(18)</a>). Also, the temperature parameter (<span class="math notranslate nohighlight">\(T\)</span>) of the cubic model (Eqn. <a class="reference internal" href="#equation-eq-cubic">(14)</a>) is in <span class="math notranslate nohighlight">\(^\circ\)</span>C, whereas the Temperature parameter in the Schoolfield model is in K.</p>
 </section>
 </section>
 </section>
