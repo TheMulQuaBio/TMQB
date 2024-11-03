@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=3943d584" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=01a0bdc2" />
@@ -227,7 +227,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Appendix-Databases.html">Databases <span class="tocSkip"></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Appendix-NLLS-Python.html">Model fitting in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Appendix-MiniProj.html">The Computing Miniproject</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Appendix-Assessment.html">Coursework Assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendix-Assessment.html">TMQB Coursework Assessment</a></li>
 </ul>
 
     </div>
@@ -528,8 +528,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errors-and-debugging">Errors and Debugging</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tracing-the-error-trail">Tracing the error trail</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-using-breakpoints">Debugging using breakpoints</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-debug">Using <code class="docutils literal notranslate"><span class="pre">debug()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-testing">Unit testing</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catching-errors">“Catching” errors</a></li>
 </ul>
 </li>
@@ -545,7 +547,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#readings-and-resources">Readings and Resources</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-as-a-programming-language">R as a Programming language</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-modelling-and-stats-in-r">Mathematical modelling and Stats in R</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Debugging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sweave-and-knitr-and-beyond">Sweave and knitr, and beyond</a></li>
 </ul>
 </li>
@@ -3413,7 +3415,7 @@ your R Workspace during the current R session. But the main thing is, you should
 <section id="using-rscript">
 <h3>Using <code class="docutils literal notranslate"><span class="pre">Rscript</span></code><a class="headerlink" href="#using-rscript" title="Link to this heading">#</a></h3>
 <p>You can also run R script from the UNIX/Linux terminal by calling <code class="docutils literal notranslate"><span class="pre">Rscript</span></code>. That is, while you have to be inside an R session to use the <code class="docutils literal notranslate"><span class="pre">source</span></code> command to run a script, you can run a R script directly from the UNIX/Linux terminal by calling <code class="docutils literal notranslate"><span class="pre">Rscript</span></code>.</p>
-<p>This allows you to easily automate execution of your R scripts (e.g., by writing a bash script) and integrate R into a bigger computing pipeline/workflow by calling it through other tools or languages (e.g., see the <a class="reference internal" href="#06-Python_II.ipynb"><span class="xref myst">Python Chapter II</span></a>).</p>
+<p>This allows you to easily automate execution of your R scripts (e.g., by writing a bash script) and integrate R into a bigger computing pipeline/workflow by calling it through other tools or languages (e.g., see the <a class="reference internal" href="#06-Python_II.ipynb"><span class="xref myst">Python ChapterI</span></a>).</p>
 <p>If you are on Linux, try using <code class="docutils literal notranslate"><span class="pre">Rscript</span></code> to run <code class="docutils literal notranslate"><span class="pre">basic_io.R</span></code>:</p>
 <ul class="simple">
 <li><p>Exit from the R console using <code class="docutils literal notranslate"><span class="pre">ctrl+D</span></code>, or open a new bash terminal</p></li>
@@ -3853,7 +3855,7 @@ The syntax for R functions is quite simple, with each function accepting “argu
 </section>
 <section id="groupwork-practical-on-tree-heights-2">
 <h3>Groupwork Practical  on Tree Heights  2<a class="headerlink" href="#groupwork-practical-on-tree-heights-2" title="Link to this heading">#</a></h3>
-<p>Assuming you have already worked through <a class="reference internal" href="#./05-Python_I.ipynb"><span class="xref myst">Python Chapter I</span></a>, write a Python version of <code class="docutils literal notranslate"><span class="pre">get_TreeHeight.R</span></code> (call it <code class="docutils literal notranslate"><span class="pre">get_TreeHeight.py</span></code>). Include a test of this script into <code class="docutils literal notranslate"><span class="pre">run_get_TreeHeight.sh</span></code>.</p>
+<p>Assuming you have already worked through <a class="reference internal" href="#./05-Python_I.ipynb"><span class="xref myst">Python Chapter</span></a>, write a Python version of <code class="docutils literal notranslate"><span class="pre">get_TreeHeight.R</span></code> (call it <code class="docutils literal notranslate"><span class="pre">get_TreeHeight.py</span></code>). Include a test of this script into <code class="docutils literal notranslate"><span class="pre">run_get_TreeHeight.sh</span></code>.</p>
 </section>
 </section>
 <section id="vectorization">
@@ -4585,20 +4587,54 @@ for examples.    There you will also see a comparison of speed of <code class="d
 </section>
 <section id="errors-and-debugging">
 <h2>Errors and Debugging<a class="headerlink" href="#errors-and-debugging" title="Link to this heading">#</a></h2>
-<p>As we learned in <a class="reference internal" href="05-Python.html#python-errors"><span class="std std-ref">Python Chapter I</span></a>, dealing with errors is a fundamental programming task that never really goes away!</p>
-<section id="unit-testing">
-<h3>Unit testing<a class="headerlink" href="#unit-testing" title="Link to this heading">#</a></h3>
-<p>We will not cover unit testing here, which we <a class="reference internal" href="05-Python.html#python-errors"><span class="std std-ref">did in Python Chapter I</span></a>). Unit testing in R is equally recommended if you are going to develop complex code and packages.</p>
+<p>As we learned in the <a class="reference internal" href="05-Python.html#python-errors"><span class="std std-ref">Python Chapter</span></a>, fixing errors and debugging is an integral part of programming! And just like Python, a variety of debugging tools and functions are available in R.</p>
+<section id="tracing-the-error-trail">
+<h3>Tracing the error trail<a class="headerlink" href="#tracing-the-error-trail" title="Link to this heading">#</a></h3>
+<p>When R encounters a runtime error, it will typically display the call “stack” (sequence) after the error occurs, helping you trace where the error happened.</p>
+<p>Let’s try an example (type and run it using your code editor):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define nested functions</span>
+<span class="n">outer_function</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">middle_function</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">middle_function</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">inner_function</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">inner_function</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1"># Intentional error: division by zero</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">d</span>
+<span class="w">  </span><span class="nf">return</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># Call the outer function</span>
+<span class="nf">outer_function</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">inner_function</span><span class="p">(</span><span class="n">b</span><span class="p">):</span> <span class="nb">object</span> <span class="s1">&#39;d&#39;</span> <span class="ow">not</span> <span class="n">found</span>
+<span class="ne">Traceback</span>:
+
+<span class="mi">1</span><span class="o">.</span> <span class="n">outer_function</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="mi">2</span><span class="o">.</span> <span class="n">middle_function</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>   <span class="c1"># at line 3 of file &lt;text&gt;</span>
+<span class="mi">3</span><span class="o">.</span> <span class="n">inner_function</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>   <span class="c1"># at line 7 of file &lt;text&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">Traceback</span></code> shows the sequence of function calls that led to the error, helping you pinpoint its origin.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>A very convenient tool for R unit testing is <a class="reference external" href="https://testthat.r-lib.org"><code class="docutils literal notranslate"><span class="pre">testthat</span></code></a>.</p>
+<p>If you do not get a traceback automatically, you an use the  <code class="docutils literal notranslate"><span class="pre">traceback()</span></code> function (run it after yout get the error) to find where the errors(s) are when a program crashes.</p>
 </div>
-<p>In addition, you can use other “<a class="reference external" href="https://en.wikipedia.org/wiki/Defensive_programming">defensive programming</a>” methods in R to keep an eye on errors that might arise in special circumstances in an complex program. A good option for this is to convert warnings to errors using the <a class="reference external" href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/stopifnot.html"><code class="docutils literal notranslate"><span class="pre">stopifnot()</span></code></a>. This is a bit like <code class="docutils literal notranslate"><span class="pre">try</span></code> (which we will cover below, and we also covered in <a class="reference internal" href="05-Python.html#python-errors"><span class="std std-ref">Python Chapter I</span></a>).</p>
 </section>
-<section id="debugging">
-<h3>Debugging<a class="headerlink" href="#debugging" title="Link to this heading">#</a></h3>
+<section id="debugging-using-breakpoints">
+<h3>Debugging using breakpoints<a class="headerlink" href="#debugging-using-breakpoints" title="Link to this heading">#</a></h3>
 <p>Once you have found an error, you need to debug it. Assuming you have an idea about where (or the general area) in your code the error is, a simple way to debug is to use the  <code class="docutils literal notranslate"><span class="pre">browser()</span></code> function.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">browser()</span></code> function allows you to insert a breakpoint in your script (where the running of the script is stopped) and then step through your code. Place it within your script at the point you want to examine local variables  (e.g. inside a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop).</p>
+<p>Justy like the <code class="docutils literal notranslate"><span class="pre">ipdb.set_tarce()</span></code> command in Python, <code class="docutils literal notranslate"><span class="pre">browser()</span></code> allows you to insert a breakpoint in your script and then step through your code. Place it within your script at the point you want to examine local variables  (e.g. inside a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop).</p>
 <p>Let’s look at an example usage of <code class="docutils literal notranslate"><span class="pre">browser()</span></code>.</p>
 <p>★ Type the following in a script file called <code class="docutils literal notranslate"><span class="pre">browse.R</span></code> and save in <code class="docutils literal notranslate"><span class="pre">code</span></code>:</p>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">Exponential</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">N0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">generations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -4618,20 +4654,51 @@ for examples.    There you will also see a comparison of speed of <code class="d
 <span class="nf">plot</span><span class="p">(</span><span class="nf">Exponential</span><span class="p">(),</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;l&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="o">=</span><span class="s">&quot;Exponential growth&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The script will be run till the first iteration of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop and the console will enter the browser mode, which looks like this:</p>
+<p>Now run <code class="docutils literal notranslate"><span class="pre">browse.R</span></code> from the R console (using <code class="docutils literal notranslate"><span class="pre">source()</span></code>).</p>
+<p>The script will be run till the first iteration of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop and the R console will enter the browser mode, which looks like this:</p>
 <div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">Browse</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>Now, you can examine the variables present at that point. Also, at the browser console, you can enter expressions as normal, or use a few particularly useful debug commands (similar to the Python debugger):</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code>: single-step</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code>: exit browser and continue</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code>: execute the next line.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code>: exit browser and continue execution</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Q</span></code>: exit browser and abort, return to top-level.</p></li>
 </ul>
+<p>You can also inspect variables in the current state of the function run using <code class="docutils literal notranslate"><span class="pre">ls()</span></code> (try it).</p>
+</section>
+<section id="using-debug">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">debug()</span></code><a class="headerlink" href="#using-debug" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">debug()</span></code> function flags a function for debugging; R will enter the browser mode every time the function is called.</p>
+<p>Let’s define a function with a bug (type and run it):</p>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="n">buggy_function</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">unknown_variable</span>
+<span class="w">  </span><span class="nf">return</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now enable debugging by running in the R console:</p>
+<p><code class="docutils literal notranslate"><span class="pre">debug(buggy_function)</span></code></p>
+<p>Now call the function:</p>
+<p><code class="docutils literal notranslate"><span class="pre">buggy_function(10)</span></code></p>
+<p>R will enter the browser mode at the beginning of <code class="docutils literal notranslate"><span class="pre">buggy_function()</span></code>. You can step through and inspect variables as you did in the <code class="docutils literal notranslate"><span class="pre">browser()</span></code> example above.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>We will not cover advanced debugging here as we did <a class="reference internal" href="05-Python.html#python-errors"><span class="std std-ref">in Python Chapter I</span></a>, but look up <code class="docutils literal notranslate"><span class="pre">traceback()</span></code> (to find where the errors(s) are when a program crashes), and <code class="docutils literal notranslate"><span class="pre">debug()</span></code> (to debug a whole function).</p>
+<p>If you want to debug the function only once, use: <code class="docutils literal notranslate"><span class="pre">debugonce(buggy_function)</span></code></p>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>IDEs like RStudio offer built-in debugging features such as breakpoints and step-through execution.</p>
+</div>
+</section>
+<section id="unit-testing">
+<h3>Unit testing<a class="headerlink" href="#unit-testing" title="Link to this heading">#</a></h3>
+<p>We will not cover unit testing here, which we <a class="reference internal" href="05-Python.html#python-errors"><span class="std std-ref">did in Python Chapter</span></a>). Unit testing in R is equally recommended, especially if you are going to develop complex code and packages.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A very convenient tool for R unit testing is <a class="reference external" href="https://testthat.r-lib.org"><code class="docutils literal notranslate"><span class="pre">testthat</span></code></a>.</p>
+</div>
+<p>In addition, you can use other “<a class="reference external" href="https://en.wikipedia.org/wiki/Defensive_programming">defensive programming</a>” methods in R to keep an eye on errors that might arise in special circumstances in an complex program. A good option for this is to convert warnings to errors using the <a class="reference external" href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/stopifnot.html"><code class="docutils literal notranslate"><span class="pre">stopifnot()</span></code></a>. This is a bit like <code class="docutils literal notranslate"><span class="pre">try</span></code> (which we will cover below, and we also covered in <a class="reference internal" href="05-Python.html#python-errors"><span class="std std-ref">Python Chapter</span></a>).</p>
 </section>
 <section id="catching-errors">
 <h3>“Catching” errors<a class="headerlink" href="#catching-errors" title="Link to this heading">#</a></h3>
@@ -4836,7 +4903,7 @@ Error in doit(popn) : Couldn&#39;t calculate mean: too few unique values!
 <p>Now have a look at the new <code class="docutils literal notranslate"><span class="pre">result</span></code>; it will have similar content as the one you got from using <code class="docutils literal notranslate"><span class="pre">lapply</span></code>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Also check out <code class="docutils literal notranslate"><span class="pre">tryCatch()</span></code> as an alternative to <code class="docutils literal notranslate"><span class="pre">try()</span></code>.</p>
+<p>Also check out <code class="docutils literal notranslate"><span class="pre">tryCatch()</span></code>, which provides more control over error and warning handling, as an alternative to <code class="docutils literal notranslate"><span class="pre">try()</span></code></p>
 </div>
 <p>★ Type the above blocks of code illustrating <code class="docutils literal notranslate"><span class="pre">try</span></code> into a script file called <code class="docutils literal notranslate"><span class="pre">try.R</span></code> and save in <code class="docutils literal notranslate"><span class="pre">code</span></code>. The script, when <code class="docutils literal notranslate"><span class="pre">source</span></code>d, should run without errors (that is, don’t run the sampling function without <code class="docutils literal notranslate"><span class="pre">try</span></code>!).</p>
 </section>
@@ -4870,7 +4937,8 @@ Error in doit(popn) : Couldn&#39;t calculate mean: too few unique values!
 <section id="is-florida-getting-warmer">
 <h3>Is Florida getting warmer?<a class="headerlink" href="#is-florida-getting-warmer" title="Link to this heading">#</a></h3>
 <p><em>This Practical assumes you have at least a basic understanding of <a class="reference internal" href="14-regress.html#regress-correlations"><span class="std std-ref">correlation coefficients</span></a> and <a class="reference internal" href="13-t_F_tests.html"><span class="std std-doc">p-values</span></a>.</em></p>
-<p>Your goal is to write an R script that will help answer the question: <em>Is Florida getting warmer</em>?  Call this script <code class="docutils literal notranslate"><span class="pre">Florida.R</span></code>.</p>
+<p>Your goal is to write an R script that will help answer the question: <em>Is Florida getting warmer</em>?</p>
+<p>Call this script <code class="docutils literal notranslate"><span class="pre">Florida.R</span></code>.</p>
 <p>To answer the question, you need to calculate the <a class="reference internal" href="14-regress.html#regress-correlations"><span class="std std-ref">correlation coefficients</span></a> between temperature and time. However, you can’t use the standard p-value calculated for a correlation coefficient, because measurements of climatic variables in successive time-points in a time series (successive seconds, minutes, hours, months, years, etc.) are <em>not independent</em>. Therefore you will use a permutation analysis instead, by generating a distribution of random correlation coefficients and compare your observed coefficient with this random distribution.</p>
 <p>Some guidelines:</p>
 <ul class="simple">
@@ -4905,7 +4973,7 @@ Error in doit(popn) : Couldn&#39;t calculate mean: too few unique values!
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><table>
+<div class="output text_html"><table class="dataframe">
 <caption>A data.frame: 6 × 2</caption>
 <thead>
 	<tr><th></th><th scope=col>Year</th><th scope=col>Temp</th></tr>
@@ -4929,7 +4997,7 @@ Error in doit(popn) : Couldn&#39;t calculate mean: too few unique values!
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/ced03d632d12151803bf4bd3c0be2999a47593d37e84d05d3b9d02d9a7e6adf2.png"><img alt="../_images/ced03d632d12151803bf4bd3c0be2999a47593d37e84d05d3b9d02d9a7e6adf2.png" src="../_images/ced03d632d12151803bf4bd3c0be2999a47593d37e84d05d3b9d02d9a7e6adf2.png" style="width: 360px; height: 360px;" /></a>
+<a class="reference internal image-reference" href="../_images/086423a1f3a9a84a386c4e320b463454b69f120b74adbebc0508a9c9b7e95697.png"><img alt="../_images/086423a1f3a9a84a386c4e320b463454b69f120b74adbebc0508a9c9b7e95697.png" src="../_images/086423a1f3a9a84a386c4e320b463454b69f120b74adbebc0508a9c9b7e95697.png" style="width: 420px; height: 420px;" /></a>
 </div>
 </div>
 <p>Then,</p>
@@ -4987,8 +5055,8 @@ Error in doit(popn) : Couldn&#39;t calculate mean: too few unique values!
 <li><p>For more focus on dynamical models: Soetaert &amp; Herman. 2009 “A practical guide to ecological modelling: using R as a simulation platform”.</p></li>
 </ul>
 </section>
-<section id="id3">
-<h3>Debugging<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<section id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://testthat.r-lib.org/"><code class="docutils literal notranslate"><span class="pre">testthat</span></code></a>: Unit Testing for R by Hadley Wickham (also developer of the <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code> package, including <code class="docutils literal notranslate"><span class="pre">ggplot</span></code>).</p></li>
 <li><p><a class="reference external" href="https://adv-r.hadley.nz/debugging.html">Notes on debugging in R by Wickham</a></p></li>
@@ -5177,8 +5245,10 @@ Error in doit(popn) : Couldn&#39;t calculate mean: too few unique values!
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errors-and-debugging">Errors and Debugging</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tracing-the-error-trail">Tracing the error trail</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-using-breakpoints">Debugging using breakpoints</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-debug">Using <code class="docutils literal notranslate"><span class="pre">debug()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-testing">Unit testing</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catching-errors">“Catching” errors</a></li>
 </ul>
 </li>
@@ -5194,7 +5264,7 @@ Error in doit(popn) : Couldn&#39;t calculate mean: too few unique values!
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#readings-and-resources">Readings and Resources</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-as-a-programming-language">R as a Programming language</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-modelling-and-stats-in-r">Mathematical modelling and Stats in R</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Debugging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sweave-and-knitr-and-beyond">Sweave and knitr, and beyond</a></li>
 </ul>
 </li>
