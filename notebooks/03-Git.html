@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=3943d584" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=01a0bdc2" />
@@ -228,6 +228,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Appendix-NLLS-Python.html">Model fitting in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Appendix-MiniProj.html">The Computing Miniproject</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Appendix-Assessment.html">TMQB Coursework Assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Appendix-HighPerformanceComputing.html">Introduction to High-Performance Computing (HPC)</a></li>
 </ul>
 
     </div>
@@ -1381,12 +1382,14 @@ abandon the branch:</p>
 </div>
 <section id="pre-commit-git-hook">
 <h3>Pre-Commit Git Hook<a class="headerlink" href="#pre-commit-git-hook" title="Link to this heading">#</a></h3>
-<p>To avoid the occurrence of a bloated git history, i.e. by mistakenly committing a large file to your repo, a good option is to use the <code class="docutils literal notranslate"><span class="pre">check-added-large-files</span></code> hook from the <a class="reference external" href="https://github.com/pre-commit/pre-commit-hooks?tab=readme-ov-file#check-added-large-files"><code class="docutils literal notranslate"><span class="pre">pre-commit-hooks</span></code></a> package.</p>
+<p><a class="reference external" href="https://github.com/pre-commit/pre-commit"><code class="docutils literal notranslate"><span class="pre">pre-commit</span></code></a> is a framework that manages the installation and execution of pre-commit hooks across multiple programming languages (including Python and R). These hooks are scripts that run automatically <strong>every time</strong> a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> is made, aborting the commit if the script fails. These can be used to enforce standards in code format and style.</p>
+<p><em>So, how would this be useful in practice?</em><br></p>
+<p>To avoid the occurrence of a <u>bloated git history</u>, i.e. by mistakenly <u>committing a large file</u> to your repository, a good option is to use the <code class="docutils literal notranslate"><span class="pre">check-added-large-files</span></code> hook from the <a class="reference external" href="https://github.com/pre-commit/pre-commit-hooks?tab=readme-ov-file#check-added-large-files"><code class="docutils literal notranslate"><span class="pre">pre-commit-hooks</span></code></a> package.</p>
 <p>This will abort a commit if the file size is too large (default size limit = 500kB).</p>
-<p>Here’s how you can install and configure <code class="docutils literal notranslate"><span class="pre">check-added-large-files</span></code> on Linux:</p>
+<p><u>Here’s how you can install and configure <code class="docutils literal notranslate"><span class="pre">check-added-large-files</span></code> on Linux:</u></p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pre-commit</span></code></p></li>
-<li><p>Create new configuration file <code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code>file for configuring the <code class="docutils literal notranslate"><span class="pre">check-added-large-files</span></code> hook; its contents should look like:</p></li>
+<li><p>Create new configuration file <code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code> for configuring the <code class="docutils literal notranslate"><span class="pre">check-added-large-files</span></code> hook; its contents should look like:</p></li>
 </ol>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># .pre-commit-config.yaml</span>
 <span class="nt">repos</span><span class="p">:</span>
@@ -1399,9 +1402,9 @@ abandon the branch:</p>
 </div>
 <p>Here,</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">repo</span></code> is The GitHub repository where the <code class="docutils literal notranslate"><span class="pre">pre-commit-hooks</span></code> package is hosted.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rev</span></code> is The version of the <code class="docutils literal notranslate"><span class="pre">pre-commit-hooks</span></code> repository to use. You can specify a tag (like <code class="docutils literal notranslate"><span class="pre">v5.0.0</span></code>) or use <code class="docutils literal notranslate"><span class="pre">master</span></code> for the latest version, though pinning to a specific version is best for stability.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hooks</span></code> are A list of hooks to configure:</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">repo</span></code> is the GitHub repository where the <code class="docutils literal notranslate"><span class="pre">pre-commit-hooks</span></code> package is hosted.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rev</span></code> is the version of the <code class="docutils literal notranslate"><span class="pre">pre-commit-hooks</span></code> repository to use. You can specify a tag (like <code class="docutils literal notranslate"><span class="pre">v5.0.0</span></code>) or use <code class="docutils literal notranslate"><span class="pre">master</span></code> for the latest version, though pinning to a specific version is best for stability.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hooks</span></code> are a list of hooks to configure:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: Specifies the hook to use, in this case, <code class="docutils literal notranslate"><span class="pre">check-added-large-files</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">args</span></code>: Optional argument to set the maximum file size limit (in KB). By default, it is 500 KB, but you can adjust this as needed with <code class="docutils literal notranslate"><span class="pre">--maxkb=&lt;size_in_kb&gt;</span></code>.</p></li>
@@ -1409,11 +1412,11 @@ abandon the branch:</p>
 </li>
 </ul>
 <p>This configuration will ensure that no added files exceed the specified size limit before a commit is allowed.</p>
-<p><em>Note</em>: By default, only files that have been staged for addition to the repo via <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> will be checked by the <code class="docutils literal notranslate"><span class="pre">check-added-large-files</span></code> hook.
+<p><em>Note</em>: By default, only files that have been staged for addition to the repository via <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> will be checked by the <code class="docutils literal notranslate"><span class="pre">check-added-large-files</span></code> hook.
 To allow the hook to check all files in the repo (both staged and unstaged), add <code class="docutils literal notranslate"><span class="pre">--enforce-all</span></code> as an argument by modifying the above configuration yaml file with</p>
 <p><code class="docutils literal notranslate"><span class="pre">args:</span> <span class="pre">['--maxkb=1000',</span> <span class="pre">'--enforce-all']</span></code></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code> file should be stored in the root directory of your repository. This allows <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> to detect the configuration automatically when you run the <code class="docutils literal notranslate"><span class="pre">pre-commit</span> <span class="pre">install</span></code> command, which sets up the hooks for the specific repository. Once set up, <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> will refer to this configuration file each time you attempt to make a commit.</p>
-<p>To set up the hooks <em>after</em> creating this file, run the following command in the root of your repository:</p>
+<p>To set up the hooks <em>after</em> creating this file, run the following command in the <strong>root</strong> of your repository:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pre-commit<span class="w"> </span>install
 </pre></div>
 </div>
